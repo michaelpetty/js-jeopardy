@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+    <h1> JavaScript Jeopardy!</h1>
+    <table class="board">
+      <thead>
+        <tr>
+          <th v-for="category in categories">{{category}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="row in board">
+          <td v-for="square in row">
+            <a href="#" v-show="!square.answered" @click="clicky(square)">{{square.value}}</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="modal" v-show="modal.state != 'CLOSED'">
+      <h2>{{ modal.category }} for {{ modal.value }}</h2>
+      <p v-show="modal.state == 'ANSWER'">{{ modal.answer }}</p>
+      <p><a href="#" v-show="modal.state == 'ANSWER'" @click="modal.state='QUESTION'">Show Question</a></p>
+      <p v-show="modal.state == 'QUESTION'">{{ modal.question }}</p>
+      <p><a href="#" @click="modal.state='CLOSED'">Close</a></p>
+    </div>
+    <div class="modal-overlay" v-show="modal.state != 'CLOSED'"></div>
+  </div>
+https://docs.google.com/presentation/d/1kbwD2E8-M4TmhaxoXMHsqU74_qNmSOsFHuDAay_ZaZY/edit#slide=id.g2b654b397_0465
+  <script src="vue.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
