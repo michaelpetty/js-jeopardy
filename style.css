@@ -10,13 +10,19 @@ html {
 
 body {
   color: white;
-  background-color: #073763;
+  background-color: #031794;
+  text-shadow: 4px 4px 0 black;
 }
-a { color: yellow; }
-a:visited { color: yellow; }
 
+a { 
+  color: yellow; 
+}
 
-h1, h2, th { 
+a:visited {
+  color: yellow; 
+}
+
+h1 { 
   font-family: "Gyparody", sans-serif;
 }
 
@@ -38,16 +44,26 @@ table {
   margin: 0 auto;
 }
 
+th {
+  font-size: 0.75rem;
+}
 th, td {
   width: 20%;
-  padding: 1rem;
 }
 
 td {
   text-align: center;
   vertical-align: middle;
   margin: 0;
-  border: 3px solid black;
+  padding: 0.5rem;
+  border: 6px solid black;
+
+  font-family: impact;
+  font-weight: bold;
+  font-size: 1.25rem;
+
+  background-color: blue;
+
 }
 
 .modal {
@@ -62,11 +78,13 @@ td {
   width: 600px;
   max-width: 100%;
 
-  padding: 1rem;
+  padding: 0;
+  text-align: center;
+  font-variant: small-caps;
 
   border: 5px solid black;
   box-shadow: 5px 5px 5px black;
-  background-color: #073763;
+  background-color: #031794;
 }
 
 .modal-overlay {

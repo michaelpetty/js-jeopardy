@@ -71,8 +71,8 @@ new Vue({
             category: "Data Types",
             answered: false,
             value: "$400",
-            answer: "The result of the expression `'Woof' + 100`",
-            question: "What is `Woof100`?"
+            answer: "This operator concatenates strings",
+            question: "What is the plus sign?"
           },
           {
             category: "Control Flow",
@@ -92,8 +92,8 @@ new Vue({
             category: "Objects & Arrays",
             answered: false,
             value: "$400", 
-            answer: "The `pop()` function does this",
-            question: "What removes the last value from an array?"
+            answer: "This function removes the last element from an array",
+            question: "What is the `pop()` function?"
           },
         ],
         [ 
